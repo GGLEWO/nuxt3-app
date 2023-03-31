@@ -1,0 +1,41 @@
+{
+  "hash": "02082fc5",
+  "browserHash": "e1b30399",
+  "optimized": {
+    "vue": {
+      "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "file": "vue.js",
+      "fileHash": "cdfec5eb",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "src": "../../node_modules/vue-router/dist/vue-router.mjs",
+      "file": "vue-router.js",
+      "fileHash": "5ec9e69f",
+      "needsInterop": false
+    },
+    "@kangc/v-md-editor/lib/preview": {
+      "src": "../../node_modules/@kangc/v-md-editor/lib/preview.js",
+      "file": "@kangc_v-md-editor_lib_preview.js",
+      "fileHash": "3f010092",
+      "needsInterop": true
+    },
+    "@kangc/v-md-editor/lib/theme/github.js": {
+      "src": "../../node_modules/@kangc/v-md-editor/lib/theme/github.js",
+      "file": "@kangc_v-md-editor_lib_theme_github__js.js",
+      "fileHash": "36465dbe",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "chunk-YNANQ2IB": {
+      "file": "chunk-YNANQ2IB.js"
+    },
+    "chunk-CPU6U5HQ": {
+      "file": "chunk-CPU6U5HQ.js"
+    },
+    "chunk-OL3AADLO": {
+      "file": "chunk-OL3AADLO.js"
+    }
+  }
+}
