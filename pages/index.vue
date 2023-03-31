@@ -1,21 +1,35 @@
 <!--
- * @Author: guanyaoming guanyaoming@linklogis.com
- * @Date: 2023-03-28 14:19:03
+ * @Author: your name
+ * @Date: 2022-02-17 20:04:00
+ * @LastEditTime: 2023-03-31 15:56:22
  * @LastEditors: guanyaoming guanyaoming@linklogis.com
- * @LastEditTime: 2023-03-28 15:09:00
- * @FilePath: \nuxt3-app\pages\index.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \ymtool\src\views\home\index.vue
 -->
 <template>
-  <div> 
-    首页
-    <nuxt-link :to="targetRoute">详情页</nuxt-link>
-    <br>
-    <nuxt-link :to="'/detail/pageDetail-ids123456789'">1号文章详情页</nuxt-link>
+  <div
+    class="w-screen h-screen flex overflow-hidden md:flex-col"
+    :style="{ height: containHeight }"
+  >
+    <MenuPage></MenuPage>
+    <div class="p-4 flex-1 overflow-auto relative" id="container">
+      <NuxtPage v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" v-if="$route.meta.keepAlive" :key="$route.name" />
+        </keep-alive>
+        <component :is="Component" v-if="!$route.meta.keepAlive" :key="$route.name" />
+      </NuxtPage>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
-const targetRoute = ref('/detail')
+
+let containHeight = '100vh';
+if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)) {
+  containHeight = 'calc(100vh - 75px)';
+  sessionStorage.setItem('isSafari', 1);
+} else {
+  sessionStorage.setItem('isSafari', 0);
+}
 </script>

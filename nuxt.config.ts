@@ -5,4 +5,13 @@ export default defineNuxtConfig({
       tailwindcss: {},
     },
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "assets/css/variable.scss";',
+        }
+      }
+    }
+  }
 })
