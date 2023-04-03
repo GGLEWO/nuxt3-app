@@ -124,12 +124,12 @@ const initArticleList = async () => {
 }
 const handleCheckDetail = async (item) => {
   await navigateTo({
-      name: 'articleDetail',
-      query: {
+    name: 'articleDetail',
+    query: {
       id: item.id
     },
     params: item
-    });
+  });
 }
 const handleRankByType = async () => {
   const { code, data } = await $fetch('/api/arcticle/find', {

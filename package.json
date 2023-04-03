@@ -4,6 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "nuxt start",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -30,6 +31,9 @@
   "dependencies": {
     "@kangc/v-md-editor": "^2.3.15",
     "@nuxtjs/tailwindcss": "^6.6.5",
+    "highlight.js": "^11.7.0",
+    "naive-ui": "^2.34.3",
+    "vant": "^3.5.4",
     "vue3-highlightjs": "^1.0.5"
   }
 }
