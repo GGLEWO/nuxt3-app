@@ -1,8 +1,8 @@
 /*
  * @Author: guanyaoming guanyaoming@linklogis.com
  * @Date: 2023-03-27 14:58:18
- * @LastEditors: guanyaoming guanyaoming@linklogis.com
- * @LastEditTime: 2023-04-03 17:47:25
+ * @LastEditors: guanym 1195817329@qq.com
+ * @LastEditTime: 2023-04-05 21:38:14
  * @FilePath: \nuxt3-app\nuxt.config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   experimental: {
     externalVue: true,
+  },
+  env: {
+    baseUrl: 'http://www.tmtool.com.cn'
   },
   postcss: {
     plugins: {
@@ -42,5 +45,5 @@ export default defineNuxtConfig({
         },
       },
     }
-  }
+  },
 })
