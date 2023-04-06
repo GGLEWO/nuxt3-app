@@ -2,7 +2,7 @@
  * @Author: guanyaoming guanyaoming@linklogis.com
  * @Date: 2023-03-27 14:58:18
  * @LastEditors: guanym 1195817329@qq.com
- * @LastEditTime: 2023-04-05 21:38:14
+ * @LastEditTime: 2023-04-06 21:26:34
  * @FilePath: \nuxt3-app\nuxt.config.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,13 +16,16 @@
  */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    baseURL: '/nuxt',
+  },
   build: { transpile: [/vant/] },
   modules: ['@nuxtjs/tailwindcss'],
   experimental: {
     externalVue: true,
   },
   env: {
-    baseUrl: 'http://www.tmtool.com.cn'
+    baseURL: 'http://www.tmtool.com.cn/'
   },
   postcss: {
     plugins: {
