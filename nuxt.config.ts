@@ -16,6 +16,8 @@
  */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  title: 'ymtool',
+  description: 'ym 个人博客'
   app: {
     baseURL: '/nuxt',
   },
