@@ -33,7 +33,7 @@ export default defineNuxtConfig({
     }
   },
   build: { transpile: [/vant/] },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@vueuse/nuxt'],
   experimental: {
     externalVue: true,
   },
